@@ -6,5 +6,7 @@ select
     body,
     owner_user_id,
     cast(parent_id as string) as parent_id
-from {{ source("raw", "posts_answers") }}
-where creation_date >= timestamp("2022-09-01")
+from 
+    {{ source("raw", "posts_answers") }}
+where 
+    creation_date >= timestamp("2022-09-01")

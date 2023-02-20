@@ -6,10 +6,9 @@ select
     body, 
     owner_user_id, 
     parent_id
-from {{ ref("stg_posts_answers") }}
-
+from 
+    {{ ref("stg_posts_answers") }}
 union all
-
 select 
     post_id, 
     created_at, 
@@ -18,4 +17,5 @@ select
     body, 
     owner_user_id, 
     parent_id
-from {{ ref("stg_posts_questions") }}
+from 
+    {{ ref("stg_posts_questions") }}
