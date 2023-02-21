@@ -54,7 +54,7 @@ COPY bigquery-public-data.stackoverflow.users;
 
 ## Set up DBT Cloud
 
-**DBT** allow us to transform data using SQL. It can be integrated in a CI/CD pipeline and it creates documentation about models.
+**DBT** allows us to transform data using SQL. It can be integrated in a CI/CD pipeline and it creates documentation about models.
 
 It runs over data store in a data warehouse such as BigQuery, Snowflake, Redshift or Databricks.
 
@@ -67,14 +67,16 @@ DBT project structure:
 - analyses
 
 Data Quality is set using the schema.yml. You can set foreach column its tests 
-to be validated. For example id must be **unique** and **not_null**.
+to be validated. For example the id column must be **unique** and **not_null**.
 
+DBT has generic tests (unique, not_null, accepted_values, relationships) which you can use but if you need more expecific rules
+you can take a look at [dbt_expectations](https://github.com/calogica/dbt-expectations)
 
 Commands:
-- dbt run --select <my model name>
-- dbt test --select <my model name>
+- dbt run --select %my model name%
+- dbt test --select %my model name%
 
-
+Data Lineage
 <img width="1150" src="https://user-images.githubusercontent.com/2066453/210103440-03364254-8471-49d4-bb87-3147b20b4f29.png">
 
 ***
