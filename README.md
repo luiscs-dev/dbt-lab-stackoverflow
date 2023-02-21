@@ -9,21 +9,54 @@ You can find more information [here](https://www.udemy.com/course/analytics-engi
 
 The tools used to create this project are:
 - BigQuery
-- DBT Cloud
+- [DBT Cloud](https://www.getdbt.com/product/what-is-dbt/)
 - Shipyard
 - Slack
 - Looker Studio
 
 ***
+
 ## Prerequisites 
+- DBT Cloud account, create one [here](https://www.getdbt.com/signup/).
+- Slack account, create one [here](https://slack.com/)
+- Shipyard account, create one [here](https://www.shipyardapp.com/)
 
 ***
 
 ## Set up BigQuery 
+Create a dataset to store our tables.
+You can create it manually or with the command [line](
+https://cloud.google.com/bigquery/docs/datasets#bq).
+```
+bq --location=us mk stackoverflow
+```
+
+Create a service account to connect BigQuery and DBT.
+You must set BigQuery Admin role.
+Get JSON key file for the service account.
+
+Create source tables base on public datasets
+```
+CREATE TABLE stackoverflow.badges
+COPY bigquery-public-data.stackoverflow.badges;
+
+CREATE TABLE stackoverflow.posts_questions
+COPY bigquery-public-data.stackoverflow.posts_questions;
+
+CREATE TABLE stackoverflow.posts_answers
+COPY bigquery-public-data.stackoverflow.posts_answers;
+
+CREATE TABLE stackoverflow.users
+COPY bigquery-public-data.stackoverflow.users;
+```
 
 ***
 
 ## Set up DBT Cloud
+
+**DBT** allow us to transform data using SQL. It can be integrated in a CI/CD pipeline and it creates documentation about models.
+
+It runs over data store in a data warehouse such as BigQuery, Snowflake, Redshift or Databricks.
 
 <img width="1150" src="https://user-images.githubusercontent.com/2066453/210103440-03364254-8471-49d4-bb87-3147b20b4f29.png">
 
