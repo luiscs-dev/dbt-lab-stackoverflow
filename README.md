@@ -86,6 +86,14 @@ Documentation
 ***
 
 ## Set up Shipyard
+
+Create a Project
+Create a new Fleet
+Add a dbt Cloud - Execute Job
+Add a Slack - Send Message
+- Configure Slack to allow message Bot
+- Create a Slack App 
+
 ![Alt text](imgs/schedule.png?raw=true "Shipyard Pipeline")
 
 
@@ -98,6 +106,10 @@ BigQuery will have three datasets and 4 tables each:
 
 A notification will be sent to Slack
 
-![Alt text](imgs/slack.png?raw=true "Big Query Structure")
+![Alt text](imgs/slack.png?raw=true "Slack Notification")
 
+
+My first Looker Dashboard, It's still in progress ...
+
+![Alt text](imgs/looker.png?raw=true "My First Dashboard in Looker")
 
