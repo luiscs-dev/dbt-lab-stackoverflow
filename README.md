@@ -86,4 +86,18 @@ Documentation
 ***
 
 ## Set up Shipyard
+![Alt text](imgs/schedule.png?raw=true "Shipyard Pipeline")
+
+
+## Results
+
+BigQuery will have three datasets and 4 tables each:
+
+![Alt text](imgs/bq.png?raw=true "Big Query Structure")
+
+
+A notification will be sent to Slack
+
+![Alt text](imgs/slack.png?raw=true "Big Query Structure")
+
 
