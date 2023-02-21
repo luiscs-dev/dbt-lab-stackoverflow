@@ -58,6 +58,23 @@ COPY bigquery-public-data.stackoverflow.users;
 
 It runs over data store in a data warehouse such as BigQuery, Snowflake, Redshift or Databricks.
 
+### Notes
+
+DBT project structure:
+- models: SQL data transformations
+- macros: reuseable codes
+- tests
+- analyses
+
+Data Quality is set using the schema.yml. You can set foreach column its tests 
+to be validated. For example id must be **unique** and **not_null**.
+
+
+Commands:
+- dbt run --select <my model name>
+- dbt test --select <my model name>
+
+
 <img width="1150" src="https://user-images.githubusercontent.com/2066453/210103440-03364254-8471-49d4-bb87-3147b20b4f29.png">
 
 ***
