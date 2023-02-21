@@ -75,9 +75,13 @@ you can take a look at [dbt_expectations](https://github.com/calogica/dbt-expect
 Commands:
 - dbt run --select %my model name%
 - dbt test --select %my model name%
+- dbt docs generate
 
 Data Lineage
 <img width="1150" src="https://user-images.githubusercontent.com/2066453/210103440-03364254-8471-49d4-bb87-3147b20b4f29.png">
+
+Documentation
+![Alt text](imgs/docs.png?raw=true "DBT Docs")
 
 ***
 
